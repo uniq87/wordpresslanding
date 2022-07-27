@@ -1,0 +1,441 @@
+/*!
+Theme Name: demolanding
+Theme URI: http://underscores.me/
+Author: Andrey
+Author URI: #
+Description: demo
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 8.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: demo
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+demo is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic
+	- Normalize
+	- Box sizing
+# Base
+	- Typography
+	- Elements
+	- Links
+	- Forms
+## Layouts
+# Components
+	- Navigation
+	- Posts and pages
+	- Comments
+	- Widgets
+	- Media
+	- Captions
+	- Galleries
+# plugins
+	- Jetpack infinite scroll
+# Utilities
+	- Accessibility
+	- Alignments
+
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Generic
+--------------------------------------------------------------*/
+
+/* Normalize
+--------------------------------------------- */
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+	 ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+ @import url(assets/css/fonts.css);
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    letter-spacing: 0.02em;
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.block__logo {
+    margin: 22px 0 19px 50px;
+}
+.block__logo img {
+    width: 147px;
+    height: 36px;
+}
+.block__content {
+    background-color: #F2F6F8;
+    padding: 88px 0 89px 50px;
+    position: relative;
+}
+.header-h1 {
+    font: 700 3vw/150% "Cera Round Pro";
+    color: #2D2D2D;
+    max-width: 435px;
+    letter-spacing: 0.02em;
+}
+.content-list-items {
+    font: 400 16px/200% "Open Sans";
+    color: #555555;
+    letter-spacing: 0.02em;
+    list-style-position: inside;
+    margin-top: 10px;
+}
+.content-inner-image {
+    position: absolute;
+    right: 49px;
+    top: 68px;
+}
+.content-button {
+    max-width: 203px;
+    font: 400 14px "Cera Round Pro";
+    color: #FFFFFF;
+    letter-spacing: 0.02em;
+    padding: 12px 61.5px;
+    background: #C81059;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+.content-button:hover {
+    transition: all 0.2s ease;
+    outline: 1px solid #C81059;
+    background-color: #FFFFFF;
+    color: #C8235A;
+}
+.block__tariffs {
+    padding-left: 45px;
+    overflow: hidden;
+}
+.header-h2 {
+    font: 500 28px/150% "Cera Round Pro";
+    color: #2D2D2D;
+    letter-spacing: 0.02em;
+    margin: 52px 0 0 0;
+}
+.slider-carousel {
+    width: 1100px;
+    margin-left: -28px;
+}
+.owl-item.hide {
+    opacity: 0.3 !important;
+}
+.slider-content-option {
+    display: flex;
+    flex-direction: column;
+    max-width: 347px;
+    filter: drop-shadow(0px 12px 25px rgba(90, 90, 90, 0.12));
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 30px 32px 30px 30px;
+    margin-top: 33px;
+    margin-bottom: 55px;
+    margin-left: 28px;
+}
+.header-h3 {
+    font: 500 20px/150% "Cera Round Pro";
+    color: #000000;
+    letter-spacing: 0.02em;
+}
+.internet-speed p:nth-child(1) {
+    font: 400 14px "Open Sans";
+    color: #ACACAC;
+    margin-top: 12.5px;
+}
+.internet-speed p:nth-child(2) {
+    font: 500 25px/150% "Cera Round Pro";
+    color: #C81059;
+    margin-top: 5px;
+}
+.internet-description {
+    width: 287px;
+    font: 400 13px/19px "Open Sans";
+    color: #555555;
+    margin-top: 4.5px;
+    margin-bottom: 25px;
+}
+.internet-checkbox input[type="checkbox"]:checked,
+.internet-checkbox input[type="checkbox"]:not(:checked),
+.form-policy input[type="checkbox"]:checked,
+.form-policy input[type="checkbox"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+.internet-checkbox input[type="checkbox"]:checked + label,
+.internet-checkbox input[type="checkbox"]:not(:checked) + label,
+.form-policy input[type="checkbox"]:checked + label,
+.form-policy input[type="checkbox"]:not(:checked) + label {
+    display: inline-block;
+    position: relative;
+    padding-left: 23px;
+    line-height: 20px;
+    cursor: pointer;
+}
+.internet-checkbox input[type="checkbox"]:checked + label:before,
+.internet-checkbox input[type="checkbox"]:not(:checked) + label:before,
+.form-policy input[type="checkbox"]:checked + label:before,
+.form-policy input[type="checkbox"]:not(:checked) + label:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 23px;
+    height: 23px;
+    outline: 2px solid rgba(45, 45, 45, 0.1);
+    background-color: #ffffff;
+}
+.internet-checkbox input[type="checkbox"]:checked + label:before,
+.internet-checkbox input[type="checkbox"]:not(:checked) + label:before,
+.form-policy input[type="checkbox"]:checked + label:before,
+.form-policy input[type="checkbox"]:not(:checked) + label:before {
+    border-radius: 2px;
+}
+.internet-checkbox input[type="checkbox"]:checked + label:before,
+.form-policy input[type="checkbox"]:checked + label:before {
+    background: #0099C8;
+    border-radius: 2px;
+    outline: none;
+}
+.internet-checkbox input[type="checkbox"]:checked + label:after,
+.internet-checkbox input[type="checkbox"]:not(:checked) + label:after,
+.form-policy input[type="checkbox"]:checked + label:after,
+.form-policy input[type="checkbox"]:not(:checked) + label:after {
+    content: "";
+    position: absolute;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+.internet-checkbox input[type="checkbox"]:checked + label:after,
+.internet-checkbox input[type="checkbox"]:not(:checked) + label:after,
+.form-policy input[type="checkbox"]:checked + label:after,
+.form-policy input[type="checkbox"]:not(:checked) + label:after {
+    left: 6.5px;
+    top: 7.5px;
+    width: 12px;
+    height: 10px;
+    background: url(assets/images/Vector_39.png) no-repeat;
+    display: inline-block;
+}
+.internet-checkbox input[type="checkbox"]:not(:checked) + label:after,
+.form-policy input[type="checkbox"]:not(:checked) + label:after {
+    opacity: 0;
+}
+.internet-checkbox input[type="checkbox"]:checked + label:after,
+.form-policy input[type="checkbox"]:checked + label:after {
+    opacity: 1;
+}
+.internet-checkbox .label-text {
+    font: 400 14px "Cera Round Pro";
+    color: #2D2D2D;
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+}
+.internet-checkbox .label-text span {
+    display: block;
+    padding-top: 3px;
+    margin-left: 10px;
+}
+.internet-price {
+    font: 700 40px "Cera Round Pro";
+    color: #2D2D2D;
+    display: flex;
+    height: 60px;
+    margin-top: 20px;
+}
+.internet-price div:nth-child(2) {
+    font: 400 16px "Open Sans";
+    color: rgba(85, 85, 85, 0.5);
+    margin-left: 10px;
+    align-self: center;
+}
+.internet-postscript {
+    font: 400 12px/150% "Open Sans";
+    color: rgba(85, 85, 85, 0.5);
+    margin-bottom: 19px;
+}
+.internet-button {
+    display: flex;
+    justify-content: center;
+    padding: 12px 0;
+    font: 500 14px "Cera Round Pro";
+    color: #FFFFFF;
+    background: #C81059;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.internet-button:hover {
+    transition: all 0.2s ease;
+    outline: 1px solid #C81059;
+    background-color: #FFFFFF;
+    color: #C8235A;
+}
+.internet-button.active {
+    background: #0099C8;
+    border-radius: 5px;
+}
+.internet-button.active:hover {
+    outline: none;
+    color: #FFFFFF;
+}
+.block__form {
+    padding-left: 45px;
+    padding-right: 55px;
+}
+.form-wrapper {
+    background: #F2F6F8;
+    border-radius: 20px;
+    padding: 50px 0 86px 50px;
+}
+.form-content .header-h2 {
+    margin: 0 0 20px 0;
+}
+.form-list-btn-items {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.list-btn-item {
+    font: 400 12px/19px "Cera Round Pro";
+    color: #2D2D2D;
+    padding: 7px 40px;
+    border: 1px solid rgba(45, 45, 45, 0.1);
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+.list-btn-item.active {
+    border: 1px solid #0099C8;
+    border-radius: 10px;
+    color: #0099C8;
+}
+.form-list-datafill {
+    display: flex;
+    gap: 30px;
+}
+.form-list-datafill input[type="text"] {
+    padding: 12px 0 15px 25px;
+    font: 400 12px/150% "Open Sans";
+    color: rgba(45, 45, 45, 0.3);
+    border: none;
+    background: #FFFFFF;
+    border-radius: 2px;
+}
+.form-list-datafill input[type="text"]::placeholder,
+.form-list-datafill input[type="text"]::-moz-placeholder {
+    font: 400 12px/150% "Open Sans";
+    color: rgba(45, 45, 45, 0.3);
+}
+.form-list-datafill input[type="text"]:nth-child(1) {
+    width: 183px;
+}
+.form-list-datafill input[type="text"]:nth-child(2) {
+    width: 355px;
+}
+.form-list-datafill input[type="submit"] {
+    font: 500 14px/150% "Cera Round Pro";
+    color: #FFFFFF;
+    padding: 12px 61px;
+    background: #C81059;
+    border-radius: 5px;
+    border: none;
+}
+.form-list-datafill input[type="submit"]:hover {
+    transition: all 0.2s ease;
+    outline: 1px solid #C81059;
+    background-color: #FFFFFF;
+    color: #C8235A;
+}
+.form-policy {
+    margin-top: 20px;
+}
+label.policy-text {
+    user-select: none;
+    font: 400 14px/150% "Cera Round Pro";
+    color: #989898;
+}
+label.policy-text span {
+    margin-top: 2px;
+    margin-left: 20px;
+    display: inline-block;
+}
+.policy-text a {
+    font: 400 14px/150% "Cera Round Pro";
+    color: #989898;
+}
+.block__footer {
+    margin: 40px 50px 21px 45px;
+    height: 76px;
+    border-top: 1px solid rgba(45, 45, 45, 0.1);
+    border-bottom: 1px solid rgba(45, 45, 45, 0.1);
+    display: flex;
+    align-items: center;
+}
+.footer-copyright {
+    font: 400 14px/150% "Cera Round Pro";
+    color: #C2C2C2;
+    margin-left: 60px;
+    margin-right: 343px;
+}
+.footer-social {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+.footer-social .social {
+    cursor: pointer;
+}
+.wpcf7 form .wpcf7-response-output {
+    padding: 0;
+    margin: 0;
+    font: 400 10px/150% "Open Sans";
+    color: #C81059;
+    border: none !important;
+    padding-left: 0;
+}
+.wpcf7-spinner {
+    width: 30px;
+    height: 26px;
+    margin: 0 !important;
+    left: -16px;
+    top: 10px;
+}
+/* Media Screen */
+@media only screen and (max-width: 992px) {
+
+}
+
+@media only screen and (max-width: 768px) {
+
+}
+
+@media only screen and (max-width: 480px) {
+
+}
+
+@media only screen and (max-width: 320px) {
+
+}

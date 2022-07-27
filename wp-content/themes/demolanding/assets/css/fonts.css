@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Cera Round Pro';
+    font-style: normal;
+    font-weight: 500;
+    src: local('../fonts/Cera Round Pro Regular'), url('../fonts/TypeMates  CeraRoundProRegular.woff') format('woff');
+}
+@font-face {
+    font-family: 'Cera Round Pro';
+    font-style: normal;
+    font-weight: 700;
+    src: local('../fonts/Cera Round Pro Bold'), url('../fonts/TypeMates  Cera Round Pro Bold.woff') format('woff');
+}
